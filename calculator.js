@@ -64,7 +64,10 @@ function calculate(expression) {
 
   console.log(num1, num2);
 
-  
+  if (tokens.length < 2 || tokens.length > 3) {
+    alert("Invalid expression.");
+  }
+
   if (tokens.length === 3) {
     num1 = Number(tokens[0]);
     operator = tokens[1];
@@ -86,7 +89,7 @@ function calculate(expression) {
     return;
 }
 
-
+// Operator expressions
   if (operator === '+') {
     return addNums(num1, num2);
   }
@@ -104,7 +107,6 @@ function calculate(expression) {
   }
 
   if (operator === '^') {
-    console.log(num1, num2, operator);
     return powerNums(num1, num2);
   }
 
@@ -113,7 +115,6 @@ function calculate(expression) {
   }
 
   if (operator === 'sqrt') {
-    console.log("hit sqrt");
     return sqrtNum(num1);
   }
 
