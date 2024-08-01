@@ -50,9 +50,12 @@ function sqrtNum(num1) {
 sqrtNum(25);
 
 // Factorial operation
-
-
 function factorialNum(num1) {
+  if (!Number.isInteger(num1) || num1 < 0) {
+    alert("Invalid input for factorial");
+    return;
+  }
+  
   let newNum = num1 - 1;
   let result = num1;
   if (num1 === 0 || num1 === 1) {
