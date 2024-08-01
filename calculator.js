@@ -1,3 +1,42 @@
+// CODE HERE
+
+// Addition operation
+function addNums(num1, num2) {
+  console.log(Number(num1) + Number(num2));
+}
+
+addNums("1", 2);
+
+// Subraction operation
+function subtractNums(num1, num2) {
+  console.log(Number(num1) - Number(num2));
+}
+
+subtractNums(3, 7);
+
+// Multiplication operation
+function multiplyNums(num1, num2) {
+  console.log(+num1 * +num2);
+}
+
+multiplyNums(2, 2);
+
+// Division operation
+function divideNums(num1, num2) {
+  console.log(+num1 / +num2);
+}
+
+divideNums(6, 3);
+
+// Power operation
+function powerNums(num1, num2) {
+  console.log(Number(num1) ** Number(num2));
+}
+
+powerNums(7, 2);
+
+
+
 function calculate(expression) {}
 
 /* **************** DO NOT EDIT THE CODE BELOW **************** */
