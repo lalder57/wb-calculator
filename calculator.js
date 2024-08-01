@@ -49,6 +49,26 @@ function sqrtNum(num1) {
 
 sqrtNum(25);
 
+// Factorial operation
+
+
+function factorialNum(num1) {
+  let newNum = num1 - 1;
+  let result = num1;
+  if (num1 === 0 || num1 === 1) {
+    return 1;
+  }
+  
+  while (newNum > 1) {
+    result = result * newNum;
+    newNum--;
+  }
+  console.log(result);
+  return result;
+}
+
+factorialNum(5);
+
 
 
 function calculate(expression) {
@@ -116,6 +136,10 @@ function calculate(expression) {
 
   if (operator === 'sqrt') {
     return sqrtNum(num1);
+  }
+
+  if (operator === '!') {
+    return factorialNum(num1);
   }
 
 }
