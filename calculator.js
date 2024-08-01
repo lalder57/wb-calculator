@@ -52,16 +52,40 @@ sqrtNum(25);
 
 
 function calculate(expression) {
+  console.log(expression);
   const tokens = expression.split(' ');
   
-  const num1 = Number(tokens[0]);
-  const operator = tokens[1];
-  const num2 = Number(tokens[2]);
+  let num1;
+  let operator;
+  let num2;
+  // const num1 = Number(tokens[0]);
+  // const operator = tokens[1];
+  // const num2 = Number(tokens[2]);
 
+  console.log(num1, num2);
+
+  
+  if (tokens.length === 3) {
+    num1 = Number(tokens[0]);
+    operator = tokens[1];
+    num2 = Number(tokens[2]);
+  }
+  
+  if (tokens.length === 2) {
+    operator = tokens[0];
+    num1 = Number(tokens[1]);
+    
+    if (Number.isNaN(num1)) {
+      alert ("You have entered an invalid number. Please try again.");
+      return;
+    }
+  }
+  
   if (Number.isNaN(num1) || Number.isNaN(num2)) {
     alert ("You have entered an invalid number. Please try again.");
     return;
-  }
+}
+
 
   if (operator === '+') {
     return addNums(num1, num2);
@@ -79,7 +103,8 @@ function calculate(expression) {
     return divideNums(num1, num2);
   }
 
-  if (operator === '**') {
+  if (operator === '^') {
+    console.log(num1, num2, operator);
     return powerNums(num1, num2);
   }
 
@@ -87,7 +112,8 @@ function calculate(expression) {
     return modNums(num1, num2);
   }
 
-  if (operator === 'Math.sqrt') {
+  if (operator === 'sqrt') {
+    console.log("hit sqrt");
     return sqrtNum(num1);
   }
 
