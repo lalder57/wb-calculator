@@ -30,10 +30,24 @@ divideNums(6, 3);
 
 // Power operation
 function powerNums(num1, num2) {
-  console.log(Number(num1) ** Number(num2));
+  console.log((+num1) ** (+num2));
 }
 
 powerNums(7, 2);
+
+// Mod operation
+function modNums(num1, num2) {
+  console.log(+num1 % +num2);
+}
+
+modNums(10, 2);
+
+// Square root operation
+function sqrtNum(num1) {
+  console.log(Math.sqrt(+num1));
+}
+
+sqrtNum(25);
 
 
 
